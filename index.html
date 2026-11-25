@@ -13,14 +13,26 @@
 @media(max-width:970px){.hero{grid-template-columns:minmax(0,1fr) minmax(280px,.76fr)}.portrait{display:none}.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.shell{width:calc(100% - 28px)}.header{padding:14px 0}.brand{font-size:.96rem}.brand img{width:38px;height:38px}.header .button{font-size:.875rem;padding-inline:10px}.hero{grid-template-columns:1fr}.hero-copy{padding:27px 20px 8px}.calculator{margin:16px;padding:18px}.services{padding-top:33px}.grid{grid-template-columns:1fr}.footer{flex-wrap:wrap}}
 .calculator select{display:block;width:100%;background:white;border:1px solid #a9b8bf;border-radius:8px;padding:9px 11px;font:inherit;color:inherit;margin-bottom:10px}.calculator select:focus-visible{outline:3px solid #4287d6;outline-offset:3px}.steps{padding-left:1.35rem;margin:0 0 20px;max-width:76ch;color:var(--muted);line-height:1.55}.steps li+li{margin-top:10px}.steps strong{color:var(--navy)}
-.rate-compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.rate-compare>div{padding:9px;border:1px solid #dbe4e0;border-radius:8px;background:#f6f8f7}.rate-compare>div:first-child{background:#e7f7ef}.rate-compare strong,.rate-compare span{display:block}.rate-compare strong,.rate-detail{font-size:.875rem}.rate-compare span{font-size:1.1rem;font-weight:800;margin-top:4px}.rate-detail{line-height:1.35;margin:0 0 8px;color:#4e5f72}.rate-detail a{color:#05604d;font-weight:650}</style>
+.rate-compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.rate-compare>div{padding:9px;border:1px solid #dbe4e0;border-radius:8px;background:#f6f8f7}.rate-compare>div:first-child{background:#e7f7ef}.rate-compare strong,.rate-compare span{display:block}.rate-compare strong,.rate-detail{font-size:.875rem}.rate-compare span{font-size:1.1rem;font-weight:800;margin-top:4px}.rate-detail{line-height:1.35;margin:0 0 8px;color:#4e5f72}.rate-detail a{color:#05604d;font-weight:650}
+.header .market-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#marketplace{padding:35px 0;scroll-margin-top:1rem}
+.market-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.market-card{background:#fff;border:1px solid #dbe4e0;border-top:4px solid #b21c2b;border-radius:14px;padding:22px}
+.market-card h3{margin:0 0 8px}
+.market-price strong{font-size:1.7rem}
+.market-note{font-size:.875rem;margin-bottom:0}
+@media(max-width:620px){.header .market-nav{gap:6px;justify-content:flex-end}.market-grid{grid-template-columns:1fr}}
+</style>
 
 <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"Fd3FSDPQbT1H6C3NHK3rNA",debug:false});</script>
 </head>
 <body>
 <header class="shell header">
   <div class="brand"><img src="data:image/webp;base64,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" alt="" width="48" height="48"><span>CampusBridge<small>Fee Services</small></span></div>
-  <a class="button outline" href="https://wa.me/8801521332222">Chat on WhatsApp</a>
+  <nav class="market-nav" aria-label="Main navigation">
+    <a class="button outline" href="#marketplace">Marketplace</a>
+    <a class="button outline" href="https://wa.me/8801521332222">Chat on WhatsApp</a>
+  </nav>
 </header>
 <main class="shell">
   <section class="hero" aria-labelledby="hero-title">
@@ -76,6 +88,25 @@
       <li><strong>Use a payment option supported by the provider.</strong> Sign in yourself if the provider requires it. Ask us whether the provider offers a guest payment link, an invoice, or an authorized payer option. Keep passwords and one-time codes private.</li>
     </ol>
     <a class="button dark" href="https://wa.me/8801521332222">Discuss your payment on WhatsApp</a>
+  </section>
+
+  <section id="marketplace" aria-labelledby="marketplace-title">
+    <h2 id="marketplace-title">Marketplace</h2>
+    <div class="market-grid">
+      <article class="market-card">
+        <h3>Netflix Subscription</h3>
+        <p>Watch on mobile, TV, laptop, or PC.</p>
+        <p class="market-price"><strong>৳249</strong> <span>for 1 month</span></p>
+        <a class="button dark" href="https://wa.me/8801521332222?text=Hi%20CampusBridge%2C%20I%E2%80%99d%20like%20to%20order%20the%201-month%20Netflix%20subscription%20for%20%E0%A7%B3249.">Order on WhatsApp</a>
+      </article>
+      <article class="market-card">
+        <h3>Upgrade Your Netflix Account</h3>
+        <p>Get help upgrading your own Netflix account to Premium (4K), Netflix’s highest tier.</p>
+        <p class="market-price"><strong>৳999</strong> <span>for 1 month</span></p>
+        <a class="button dark" href="https://wa.me/8801521332222?text=Hi%20CampusBridge%2C%20I%E2%80%99d%20like%20help%20upgrading%20my%20own%20Netflix%20account%20to%20Premium%20(4K)%20for%201%20month%20at%20%E0%A7%B3999.">Request Upgrade on WhatsApp</a>
+        <p class="market-note">Sign in directly on Netflix and keep your password and verification codes private.</p>
+      </article>
+    </div>
   </section>
 </main>
 <footer class="shell footer"><span>CampusBridge Fee Services</span><a href="https://wa.me/8801521332222">WhatsApp +880 1521-332222</a></footer>
@@ -146,4 +177,3 @@ loadMarketRate();
 </script>
 </body>
 </html>
-
